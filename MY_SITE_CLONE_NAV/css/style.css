@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --bg-color: #151518;
+    --text-color: #ffffffe0;
+    --mani-color: #28e74e;
+}
+body{
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    display: flex;
+    padding:27px 11%;
+    transition: all .52s ease;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo i{
+    color: var(--mani-color);
+    font-size: 30px;
+    margin-right: 5px;
+}
+.logo span{
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: 700;
+}
+.nav{
+    display: flex;
+}
+.nav a {
+    color: var(--text-color);
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 7px 0;
+    margin: 1px 27px;
+
+}
+.nav a:hover{
+    color: var(--mani-color);
+}
+.nav a.active{
+    color: var(--mani-color);
+}
+.main{
+    display: flex;
+    align-items: center;
+}
+.main a{
+    margin-left: 22px;
+    margin-right: 12px;
+    color: var(--text-color);
+    font-size: .9rem;
+    font-weight: 700;
+    transition: all .52s ease;
+}
+.user{
+    display: flex;
+    align-items: center;
+}
+.user i{
+    color: var(--mani-color);
+    font-size: 22px;
+    margin-right: 7px;
+}
+.main a:hover{
+    color: var(--mani-color);
+}
+#menu-icon{
+    font-size: 22px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+@media (max-width: 1278px){
+    header{
+        padding: 12px 2%;
+        transition: .3s;
+    }
+
+    .nav{
+        padding: 5px 0;
+        margin: 0px 18px;
+    }
+}
+@media (max-width: 1080px){
+    #menu-icon{
+        display: block;
+        transition: .50s;
+    }
+    .nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 37vh;
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        border-radius: 17px;
+        transition: all .50s ease;
+        
+    }
+    .nav a{
+        display: block;
+        margin: 10px 0;
+        padding: 0px 20px;
+        transition: all .50s ease;
+        
+    }
+    .nav a:hover{
+        color:azure;
+        transform: translateY(7px);
+    }
+    .nav a.active{
+        color: var(--mani-color);
+    }
+
+    .nav.open{
+        right: 1%;
+    }
+}
